@@ -1,0 +1,40 @@
+{
+  "cocktails": [
+    {
+      "id": 1,
+      "name": "Blue lagoon",
+      "description": "Sweet, refreshing",
+      "image": "https://izya.com/image/123.png",
+      "image_large": "https://izya.com/image/123_large.png",
+      "description_large": "Some large text",
+      "strength": 12,
+      "keywords": [
+        "vodka",
+        "sweet",
+        "strong",
+        "absinthe",
+        "lime"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Blue 22222lagoon",
+      "description": "Sweet, refreshing",
+      "image": "https://izya.com/image/123.png",
+      "image_large": "https://izya.com/image/123_large.png",
+      "description_large": "Some large text",
+      "strength": 12,
+      "keywords": [
+        "vodka",
+        "sweet",
+        "strong",
+        "absinthe",
+        "lime"
+      ]
+    }
+  ],
+  "stoplist": [
+    222,
+    2
+  ]
+}
