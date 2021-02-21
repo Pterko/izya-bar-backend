@@ -14,7 +14,7 @@ FROM node:12.13-alpine as production
 
 ARG NODE_ENV=production
 ENV NODE_ENV=${NODE_ENV}
-ENV NODE_DATABASE_LOCATION='/usr/src/app/database.json'
+ENV NODE_DATABASE_LOCATION='/usr/src/app/database'
 
 WORKDIR /usr/src/app
 

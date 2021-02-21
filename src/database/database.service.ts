@@ -3,7 +3,7 @@ import * as lowdb from 'lowdb';
 import * as FileAsync from 'lowdb/adapters/FileAsync';
 import { CocktailItem } from 'src/cocktail/CocktailItem';
 import * as uuid from 'uuid';
-
+import * as path from 'path';
 
 @Injectable()
 export class DatabaseService {
@@ -15,7 +15,7 @@ export class DatabaseService {
 
 
   private async initDatabase() {
-    const adapter = new FileAsync(process.env.NODE_DATABASE_LOCATION || 'db.json');
+    const adapter = new FileAsync( path.join((process.env.NODE_DATABASE_LOCATION || ''), './database.json'));
     this.db = await lowdb(adapter);
     this.db.defaults({ cocktails: [], stoplist: [] }).write();
   }
