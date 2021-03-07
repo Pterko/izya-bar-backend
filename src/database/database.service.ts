@@ -34,7 +34,7 @@ export class DatabaseService {
     if (existingRecord){
       existingCocktails[existingCocktails.indexOf(existingRecord)] = cocktail;
     } else {
-      cocktail.id = (Math.max(...existingCocktails.map(x => x.id)) || 0) + 1;
+      cocktail.id = (Math.max(...existingCocktails.filter(x => x.id).map(x => x.id), 0) || 0) + 1;
       existingCocktails.push(cocktail);
     }
 
