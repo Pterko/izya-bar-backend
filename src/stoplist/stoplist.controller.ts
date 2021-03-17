@@ -11,8 +11,9 @@ export class StoplistController {
 
 
   @Get('/')
-  async getStoplist(): Promise<StopList>{
-    return this.databaseService.getStopList();
+  async getStoplist(): Promise<{ids: StopList}>{
+    const stoplist = await this.databaseService.getStopList();
+    return { ids: stoplist } ;
   }
 
   @ApiBody({ type: EditStoplistDTO })
