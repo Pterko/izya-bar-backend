@@ -15,9 +15,9 @@ export class CocktailController {
   @Get('/cocktails')
   async getAllCocktails(): Promise<{cocktails: CocktailItem[]}> {
     const cocktails = await this.databaseService.findAllCocktails();
-    const stoplist = await this.databaseService.getStopList();
-    const cocktailsWithoutStoplist = cocktails.filter(cocktail => !stoplist.includes(cocktail.id))
-    return { cocktails: cocktailsWithoutStoplist };
+    // const stoplist = await this.databaseService.getStopList();
+    // const cocktailsWithoutStoplist = cocktails.filter(cocktail => !stoplist.includes(cocktail.id))
+    return { cocktails };
   }
 
 
